@@ -21,7 +21,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Catalogo Libri</a>
+                <a class="nav-link active" aria-current="page" href="./index.html">Catalogo Libri</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Anagrafica Utenti</a>
@@ -33,43 +33,40 @@
                 <a class="nav-link" href="#">Help</a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search">
-              <button class="btn btn-outline-light" type="submit">Cerca</button>
-            </form>
           </div>
         </div>
       </nav>
 
       <section>
+        <form action="" method="post">
         <div class="container pt-3">
           <h2>Nuovo libro</h2>
               <div class="row">
                 <div class="col pt-3">
-                  <h6>Nome Autore</h6>
-                  <input type="text" class="form-control" id="name" placeholder="Inserisci il nome dell'autore" aria-label="name">
+                  <label for="AuthorName" class="fw-bold">Nome autore</label>
+                  <input required type="text" class="form-control" id="name" placeholder="Inserisci il nome dell'autore" aria-label="name">
                 </div>
                 <div class="col pt-3">
-                  <h6>Cognome autore</h6>
-                  <input type="text" class="form-control" id="lastname" placeholder="Inserisci il cognome dell'autore" aria-label="lastname">
+                  <label for="AuthorLastname" class="fw-bold">Cognome Autore</label>
+                  <input required type="text" class="form-control" id="lastname" placeholder="Inserisci il cognome dell'autore" aria-label="lastname">
                 </div>
               </div>
         </div>
 
-        <div class="container">
+        <div class="container pt-3">
           <div class="row">
             <div class="col-6-lg">
-              <h6>Titolo</h6>
-              <input type="text" class="form-control" id="booktitle" placeholder="Inserisci il titolo del libro" aria-label="booktitle">
-              <span >Titolo versione italiana</span>
+              <label for="Title" class="fw-bold">Titolo</label>
+              <input required type="text" class="form-control" id="booktitle" placeholder="Inserisci il titolo del libro" aria-label="booktitle">
+              <label for="ItalianTitle">Titolo in versione Italiana</label>
             </div>
           </div>
         </div>
 
-        <div class="container pt-5 pb-3">
+        <div class="container pt-3 pb-3">
           <div class="row">
             <div class="col-md-4">
-              <label for="inputgenre" id="genre" class="form-label">Genere</label>
+              <label for="inputgenre" id="genre" class="form-label fw-bold">Genere</label>
               <select id="inputgenre" class="form-select">
                 <option selected>Scegli il genere</option>
                 <option>Narrativa</option>
@@ -79,27 +76,23 @@
               </select>
             </div>
             <div class="col-md-4">
-              <label for="inputYear" id="year" class="form-label">Anno di pubblicazione</label>
+              <label for="inputYear" id="year" class="form-label fw-bold">Anno di pubblicazione</label>
               <input type="text" class="form-control" id="inputYear" placeholder="Inserisci l'anno">
             </div>
             <div class="col-md-4">
-              <label for="inputISBN" id="isbn" class="form-label">ISBN#</label>
+              <label for="inputISBN" id="isbn" class="form-label fw-bold">ISBN#</label>
               <input type="text" class="form-control" id="inputISBN" placeholder="Inserisci il codice ISBN#">
             </div>
           </div>
-
         </div>
 
-
-        <div class="container">
+        <div class="container pt-2">
           <hr py-2>
           <div class="row">
-            <h6>Note</h5>
+            <label for="Note" class="fw-bold">Note</label>
             <div class="form-floating">
               <textarea class="form-control" placeholder="Inserisci eventuali note sul libro" id="floatingTextarea2" style="height: 100px"></textarea>
-              
             </div>
-            
           </div>
 
           <div class="container p-0 pt-3">
@@ -107,20 +100,16 @@
               <div class="col-12 pb-3">
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" id="gridCheck">
-                  <label class="form-check-label" for="gridCheck">
-                    Disponibile anche in digitale
-                  </label>
+                  <label class="form-check-label fw-bold" for="gridCheck"> Disponibile anche in digitale</label>
                 </div>
               </div>
               <div class="col-12">
                 <button type="submit" class="btn btn-primary">Aggiungi libro</button>
               </div>
             </div>
-            
           </div>
         </div>
-
-
+      </form>
       </section>
 
       
